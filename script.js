@@ -21,4 +21,4 @@ function animationTime(){
   }, breatheTime)
 }
 
-setInterval(breathAnimation, totalTime)
+setInterval(animationTime, totalTime)
