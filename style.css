@@ -1,11 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+:root {
+  --clr-white: #fff;
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: #224941 url('./img/bg.jpg') no-repeat center center/cover;
+  background: #224941 url('./img/bg1.jpg') no-repeat center center/cover;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   min-height: 100vh;
@@ -38,7 +47,7 @@ body {
   z-index: -1;
 }
 
-.gradient-circle {
+.gradient-circle1 {
   background: conic-gradient(
     #55b7a4 0%,
     #4ca493 40%,
@@ -46,6 +55,57 @@ body {
     #fff 60%,
     #336d62 60%,
     #2a5b52 100%
+  );
+  height: 320px;
+  width: 320px;
+  z-index: -2;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+.gradient-circle2 {
+  background: conic-gradient(
+    #CFEED1 0%,
+    #05E0E9 40%,
+    #fff 40%,
+    #fff 60%,
+    #FF2768 60%,
+    #4E1A3D 100%
+  );
+  height: 320px;
+  width: 320px;
+  z-index: -2;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+.gradient-circle3 {
+  background: conic-gradient(
+    #D3B1C2 0%,
+    #C197D2 40%,
+    #fff 40%,
+    #fff 60%,
+    #211522 60%,
+    #613659 100%
+  );
+  height: 320px;
+  width: 320px;
+  z-index: -2;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+.gradient-circle4 {
+  background: conic-gradient(
+    #FBC490 0%,
+    #FBAA60 40%,
+    #fff 40%,
+    #fff 60%,
+    #F67B50 60%,
+    #A82810 100%
   );
   height: 320px;
   width: 320px;
@@ -111,3 +171,30 @@ body {
     transform: scale(1);
   }
 }
+
+button {
+  margin-bottom: 50px;
+}
+.btn-hero {
+  display: grid;
+  place-items: center;
+  font-family: var(--ff-primary);
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--clr-white);
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 700;
+  transition: var(--transition);
+  border: 2px solid var(--clr-white);
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  padding: 0.75rem 1.25rem;
+}
+.btn-hero:hover {
+  color: var(--clr-white);
+  background: var(--clr-black);
+}
+
